@@ -2,7 +2,7 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: ''
-webhook_url:
+webhook_url: 
 sections:
 - type: directory
   path: content/portfolio
@@ -35,7 +35,6 @@ sections:
 - type: document
   path: config.toml
   label: Configuration
-  read_only: false
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''
@@ -46,6 +45,7 @@ build:
   - HUGO_ENV=staging
   - HUGO_VERSION=0.64.1
   preview_output_directory: public
+  install_dependencies_command: npm install
   preview_docker_image: forestryio/hugo:latest
   mount_path: "/srv"
   working_dir: "/srv"
